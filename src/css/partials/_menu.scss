@@ -20,18 +20,19 @@ header {
     align-items: center;
     .menu-item {
         margin-left: 16px;
+        position: relative;
     }
 }
 
-.nav-link-desktop{
-    display:inline-block;
+.nav-link-desktop {
+    display: inline-block;
     padding: 12px 16px;
     position: relative;
-    transition: .3s linear;
-    &::after{
-        content:"";
+    transition: 0.3s linear;
+    &::after {
+        content: "";
         position: absolute;
-        top:42%;
+        top: 42%;
         right: -3px;
         width: 7px;
         height: 7px;
@@ -40,9 +41,9 @@ header {
         transform: rotate(45deg);
         border-radius: 1px;
     }
-    &:hover{
-        &::after{
-            top:45%;
+    &:hover {
+        &::after {
+            top: 45%;
         }
     }
 }
@@ -73,6 +74,55 @@ header {
     align-items: center;
 }
 
+.dropdown-menu {
+    background-color: $white-light;
+    border-radius: 16px;
+    list-style: none;
+    position: absolute;
+    top: 48px;
+    left: 24px;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .7s ease;
+    box-shadow: 0px 51px 80px rgba(169, 80, 169, 0.08), 0px 15.375px 24.1177px rgba(169, 80, 169, 0.0521271),
+        0px 6.38599px 10.0172px rgba(169, 80, 196, 0.04), 0px 2.30969px 3.62304px rgba(169, 80, 196, 0.0278729);
+    .dropdown-item {
+        width: 100%;
+    }
+}
+
+.active-dropdown-menu{
+    pointer-events: all;
+    opacity: 1;
+}
+
+.nav-link-dropdown {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 16px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $secondary-normal;
+        transition: 0.5s ease;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
 .logo {
     width: 48px;
     height: 48px;
@@ -93,8 +143,4 @@ header {
     @include responsive(s) {
         display: block;
     }
-}
-
-.dropdown-menu {
-    display: none;
 }
