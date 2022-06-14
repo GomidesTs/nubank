@@ -227,6 +227,19 @@ header {
     display: flex;
     flex-direction: column;
     list-style: none;
+    svg {
+        width: 36px;
+        height: 36px;
+        path {
+            stroke: $gray-7;
+            transition: .7s ease;
+        }
+        &:hover {
+            path {
+                stroke: $primary-normal;
+            }
+        }
+    }
 }
 
 .nav-link-mobile {

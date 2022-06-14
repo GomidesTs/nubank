@@ -1118,6 +1118,21 @@ header {
   list-style: none;
 }
 
+.nav-list-mobile svg {
+  width: 36px;
+  height: 36px;
+}
+
+.nav-list-mobile svg path {
+  stroke: #a6a6a7;
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.nav-list-mobile svg:hover path {
+  stroke: #82269e;
+}
+
 .nav-link-mobile {
   display: inline-block;
   font-family: "Sora", sans-serif;
