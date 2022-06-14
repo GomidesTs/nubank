@@ -1,0 +1,24 @@
+a {
+    @include typeface-2(p2, desktop);
+    text-decoration: none;
+    color: $black-normal;
+    transition: 0.5s ease;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btn {
+    background: linear-gradient(220.94deg, $secondary-normal 14.43%, $primary-normal 85.28%);
+    border-radius: 16px;
+    padding: 12px 32px;
+    transition: 0.3s ease;
+    color: $white-light;
+    box-shadow: 0px 43px 60px rgba(169, 80, 196, 0.14), 0px 12.9632px 18.0882px rgba(169, 80, 196, 0.0912224),
+        0px 5.38427px 7.51293px rgba(169, 80, 196, 0.07), 0px 1.94738px 2.71728px rgba(169, 80, 196, 0.0487776);
+    &:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 62px 191px rgba(169, 80, 196, 0.4), 0px 18.6912px 57.5809px rgba(169, 80, 196, 0.260636),
+            0px 7.76336px 23.9162px rgba(169, 80, 196, 0.2), 0px 2.80786px 8.65001px rgba(169, 80, 196, 0.139364);
+    }
+}
